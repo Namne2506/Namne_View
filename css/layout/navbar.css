@@ -1,0 +1,55 @@
+/* Định dạng cơ bản của navbar */
+.navbar {
+    height: 100%;
+    width: 226px;  /* Chiều rộng mặc định */
+    background-color: lightblue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;  /* Hiệu ứng thay đổi chiều rộng */
+}
+
+.navbar .nav-item {
+    width: 100%;
+    height: 40px;
+    padding-left: 40px;  /* Khoảng cách bên trái cho text */
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 16px center;
+    transition: padding-left 0.3s ease, opacity 0.3s ease;  /* Hiệu ứng thay đổi padding-left và opacity */
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    opacity: 1;  /* Đảm bảo các mục hiển thị khi navbar mở */
+}
+
+/* Khi người dùng hover qua các mục */
+.navbar .nav-item:hover {
+    background-color: rgb(38, 201, 146);
+    cursor: pointer;
+}
+
+/* Khi navbar thu gọn, các mục sẽ ẩn dần */
+.navbar.collapsed .nav-item {
+    padding-left: 0;  /* Ẩn chữ (xóa padding-left) */
+    opacity: 0;  /* Ẩn các mục */
+}
+
+.navbar.collapsed {
+    width: 80px;  
+}
+
+.navbar .item-bottom {
+    position: absolute;
+    background-color: lightblue;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 0;
+    color: #fff;  /* Màu chữ */
+    font-size: 16px;  /* Kích thước font chữ */
+    line-height: 20px;  /* Căn giữa chữ */
+}
+
+

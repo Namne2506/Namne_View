@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/base.css">   
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>  
+        <div class="header">
+            <div class="header-left">
+                <div class="header-left-btn">
+                </div>
+                <div class="header-left-logo">
+                    <img src="../assets/cukcuk-logo.png" alt logo>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class = "n-row">
+                    <select name="" id="" class="n-select">
+                        <option>Chi nhánh Hà Nội</option>
+                        <option>Chi nhánh Thành Phố Hồ Chí Minh</option>
+                    </select>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-right-avatar">
+                    <img src="../assets/icon/avatar-default.png" alt="AVatar">
+                </div>
+                <div class="header-right-name">Nguyễn Đức Nam</div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="navbar">
+                <div class="navbar">
+                    <div class="nav-item nav-item-overvỉew">
+                        <i class="fas fa-tachometer-alt"></i> Tổng quan
+                    </div>
+                    <div class="nav-item nav-item-ListEmployee">
+                        <i class="fas fa-users"></i> Danh sách nhân viên
+                    </div>
+                    <div class="nav-item nav-item-report">
+                        <i class="fas fa-chart-line"></i> Báo cáo
+                    </div>
+                    <div class="nav-item nav-item-Setting">
+                        <i class="fas fa-cogs"></i> Setting
+                    </div>
+                    <div class="nav-item item-bottom" id="toggleBtn">
+                        <i class="fas fa-chevron-left"></i> Thu gọn
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="page-header">
+                    <div class="header-titlle">
+                        <p class="large-text">Danh sách nhân viên</p>
+                    </div>
+                    <div class="header-btn">
+                        <div class="n-row">
+                            <button class="n-btn n-btn-icon n-btn-icon-add" onclick="toggleModal()">
+                                Thêm mới nhân viên
+                            </button>
+                        </div>
+                        
+                        <div class="overlay" id="overlay"></div>
+                        
+                        <div class="modal" id="employee-form-modal">
+                            <div class="modal-header">
+                                <h2>Thông tin chi tiết nhân viên</h2>
+                                <button class="close-btn" onclick="toggleModal()">✖</button>
+                            </div>
+                            <form class="employee-form">
+                                <fieldset class="form-section">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="employee-id">Mã nhân viên <span class="required">*</span></label>
+                                            <input type="text" id="employee-id" placeholder="Mã nhân viên" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="full-name">Họ và tên <span class="required">*</span></label>
+                                            <input type="text" id="full-name" placeholder="Họ và tên" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="dob">Ngày sinh</label>
+                                            <input type="date" id="dob">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Giới tính</label>
+                                            <div class="gender-options">
+                                                <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                                                <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                                                <label><input type="radio" name="gender" value="Khác"> Khác</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                        
+                                <fieldset class="form-section">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="position">Vị trí</label>
+                                            <input type="text" id="position">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="id-number">Số CMTND</label>
+                                            <input type="text" id="id-number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="issue-date">Ngày cấp</label>
+                                            <input type="date" id="issue-date">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="department">Phòng ban</label>
+                                            <input type="text" id="department">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="issue-place">Nơi cấp</label>
+                                            <input type="text" id="issue-place">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="address">Địa chỉ</label>
+                                            <input type="text" id="address">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                        
+                                <fieldset class="form-section">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="mobile">ĐT di động</label>
+                                            <input type="text" id="mobile">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">ĐT cố định</label>
+                                            <input type="text" id="phone">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" placeholder="example@sth.com">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                        
+                                <fieldset class="form-section">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="bank-account">Tài khoản ngân hàng</label>
+                                            <input type="text" id="bank-account">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="bank-name">Tên ngân hàng</label>
+                                            <input type="text" id="bank-name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="branch">Chi nhánh</label>
+                                            <input type="text" id="branch">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                        
+                                <div class="form-footer">
+                                    <button type="submit" class="save-btn">Lưu</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="content-main">
+                    <div class="content-toolbar">
+                        <div class="n-row">
+                            <input type="text" class="n-input n-input-icon n-input-icon-search" placeholder = "Tìm kiếm theo mã, họ tên"> 
+                        </div>
+                    </div>
+                    <div class="content-table">
+                        <div class = "n-row">
+                            <table class = "n-table">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Mã nhân viên</th>
+                                        <th>Họ và tên</th>
+                                        <th>Giới tính</th>
+                                        <th>Ngày sinh</th>
+                                        <th>Địa chỉ email</th>
+                                        <th>Địa chỉ</th>
+                                    </tr>
+                                </thead>
+                                
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/base.js"></script>
+    </body>
+</html>

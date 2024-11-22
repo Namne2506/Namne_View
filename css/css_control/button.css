@@ -1,0 +1,27 @@
+.n-btn {
+    height: 40px;
+    background: #019160;
+    border: none;
+    border-radius: 4px;
+    padding: 0 32;
+    color: #fff;
+    font-family: GoogleSans;
+    font-size: 13px;
+    right: 0;
+}
+
+.n-btn:hover {
+    background-color: #0ab179;
+    cursor: pointer;
+}
+
+.n-btn-icon {
+    padding: 0 16px 0 40px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+}
+
+.n-btn-icon-add {
+    background-image: url(../../assets/icon/add.png);
+}

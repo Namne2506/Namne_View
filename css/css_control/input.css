@@ -1,0 +1,23 @@
+.n-input {
+    height: 40px;
+    width: 200px;
+    border-radius: 4px;
+    outline: none;
+    background-color: #fff;
+    color: #000;
+    padding: 0 16px;
+    border: 1px solid #bbb;
+    font-family: GoogleSans;
+}
+
+.n-input-icon {
+    padding-right: 48px;
+    padding-left: 16px;
+    background-position: right 20px center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+}
+
+.n-input-icon-search  {
+    background-image: url(../../assets/icon/search.png);
+}

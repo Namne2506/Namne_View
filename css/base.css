@@ -1,0 +1,44 @@
+@import url(../css/css_control/button.css);
+@import url(../css/css_control/input.css);
+@import url(../css/css_control/table.css);
+@import url(../css/page/employee.css);
+@import url(../css/layout/header.css);
+@import url(../css/layout/navbar.css);
+@import url(../css/page/form_table.css);
+
+
+
+body {
+    font-family: GoogleSans;
+    font-size: 13px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: GoogleSans;
+    src: url("/assets/font/GoogleSans-Regular.otf");
+}
+
+@font-face {
+    font-family: GoogleSans Bold;
+    src: url("../assets/font/GoogleSans-Bold.otf");
+}
+
+.n-row {
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+}
+
+.n-select {
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    padding: 0 16px;
+}

@@ -1,0 +1,14 @@
+.n-table {
+    min-width: 500px;
+    border-collapse: collapse;
+    border-spacing: unset;
+}
+
+.n-table tr {
+    border: 1px solid #bbb;
+    height: 40px;
+}
+.n-table td, th {
+    padding: 0 58px;
+    border-right: 1px solid #bbb;
+}
